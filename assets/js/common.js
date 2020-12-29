@@ -1,16 +1,16 @@
-// 기본적인 사용 방법
-Kakao.Link.createDefaultButton({
-    container: ".kakao-link", // 공유하기 기능을 부여할 DOM container
-    objectType: "feed", // 피드타입
-    content: {
-      title: "HAPPY NEW YEAR, 송구영신예배 | 엑소더스 2021",
-      description:
-        "2020년 12월31일 송구영신예배, 2021년 1월1일-2일 엑소더스 2021",
-      imageUrl:
-        "https://w.namu.la/s/5a218e413a95f08b57a7b18998c294f9a8c18f2447e7e5ec6d369557b876646c8bf998ec5fd20db50eec75cfa5aeb7defb174242ace627c8d73bd90c86f934a98adb426c8a2f3cb512c7a66b69637bf92ce125f3becd127e0ae6aa7429ab11a2c5e5a9af2dd1895ac4aaebd346c8581d",
-      link: {
-        webUrl: "https://drawoo.github.io/mobile/", // 카카오 PC에서 확인할 때 연결될 웹 url
-        mobileWebUrl: "https://drawoo.github.io/mobile/", // 카카오 앱에서 확인할 때 연결될 웹 url
-      },
-    },
-  });
+Kakao.init('0ea702deeb89ca03d3d2f703de9d1686'); 
+
+function link_kakao() { 
+    var sh_title = "공유할 제목"; 
+    var sh_desc = "상세설명"; 
+    Kakao.Link.sendDefault({ objectType: 'feed', 
+                                content: { 
+                                    title: sh_title, 
+                                    description: sh_desc, 
+                                    imageUrl: "https://user-images.githubusercontent.com/76463172/103274840-03445080-4a06-11eb-943f-70d3900d6fc9.jpg", 
+                                    link: { mobileWebUrl: "https://drawoo.github.io/mobile/", 
+                                                  webUrl: "https://drawoo.github.io/mobile/" 
+                                }
+                             },
+                             });
+                             }
