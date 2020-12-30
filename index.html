@@ -7,66 +7,44 @@
 	<meta name="format-detection" content="telephone=no, address=no, email=no">
     <meta property="og:image:width" content="800"/>
     <meta property="og:image:height" content="400"/> 
-    <meta property="og:image" content="https://user-images.githubusercontent.com/62317791/103292192-af9b2c80-4a30-11eb-81f4-dab66234fa81.png" />
+    <!-- <meta property="og:image" content="https://user-images.githubusercontent.com/62317791/103292192-af9b2c80-4a30-11eb-81f4-dab66234fa81.png" /> -->
     <title>thumbnail</title>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.min.css">
+    <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
  </head>
     <body>
-      <noscript>you need to enable JavaScript to run this app.</noscript>
-      <div id="root"></div>
 
-      <!-- 카카오 sdk 등록 -->
-      <script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
-
-      <script>
-        componentDidMount() {
-    window.Kakao.Link.createDefaultButton({
-      container: '#kakao-link-btn',
-      objectType: 'feed',
-      content: {
-        title: '딸기 치즈 케익',
-        description: '#케익 #딸기 #삼평동 #카페 #분위기 #소개팅',
-        imageUrl: 'https://user-images.githubusercontent.com/74703315/103330840-98972180-4aa6-11eb-8b49-4027bcfe7cd3.png',
-        link: {
-          mobileWebUrl: 'https://drawoo.github.io/mobile/',
-          webUrl: 'https://drawoo.github.io/mobile/'
-        }
-      },
-      social: {
-        likeCount: 286,
-        commentCount: 45,
-        sharedCount: 845
-      },
-      buttons: [
-        {
-          title: '웹으로 보기',
-          link: {
-            mobileWebUrl: 'https://drawoo.github.io/mobile/',
-            webUrl: 'https://drawoo.github.io/mobile/'
-          }
-        },
-        {
-          title: '앱으로 보기',
-          link: {
-            mobileWebUrl: 'https://drawoo.github.io/mobile/',
-            webUrl: 'https://drawoo.github.io/mobile/'
-          }
-        }
-      ]
-    });
-}
-  render() {
-    return (
-      <div className="Kakao">
-        <h2>kakao page</h2>
-        <a id="kakao-link-btn" href="javascript:;">
-          <img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+      <span class="sociallink ml-1">
+        <a href="javascript:sendLinkKakao()" id="kakao-link-btn" title="카카오톡으로 공유">
+            <img src="{% static 'images/kakaotalk.png' %}" width=36 alt="Kakaotalk">
         </a>
-      </div>
-    );
-  }
+    </span>
+    <!-- 스크립트  -->
+    <script>
+      Kakao.init('0ea702deeb89ca03d3d2f703de9d1686');
+      function sendLinkKakao(){
+          Kakao.Link.sendDefault({
+            objectType: 'feed',
+            content: {
+              title: '{{ 카카오공유하기 테스트 }}',
+              description: '{{ 카카오공유 테스트 }}',
+              imageUrl: '{{ post.content|bs4imagepath|full_url }}',
+              link: {
+                mobileWebUrl: '{{ request.build_absolute_uri }}',
+                webUrl: '{{ request.build_absolute_uri }}'
+              }
+            },
+            buttons: [       
+              {
+                title: '링크 열기',
+                link: {
+                  mobileWebUrl: '{{ request.build_absolute_uri }}',
+                  webUrl: '{{ request.build_absolute_uri }}'
+                }
+              }
+            ]
+          }); 
+      }
       </script>
-
-      
     </body>
 </html>
