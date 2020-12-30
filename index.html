@@ -1,24 +1,46 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Document</title>
-</head>
-<body>
-  <!-- NavBar -->
-  <nav id="navbar">
-    <div class="navbar__logo"><i class="fab fa-d-and-d"></i></div>
-  </nav>
-  <!-- About -->
-  <section id="about"></section>
-  <!-- Skills -->
-  <scetion id="skills"></scetion>
-  <!-- Work -->
-  <section id="work"></section>
-  <!-- Contents -->
-  <section id="contents"></section>
-  <!-- Contact -->
-  <section id="contact"></section>
-</body>
+  <head>
+    <meta charset="UTF-8">
+    <!-- divice 설정 두손 확대 축소 가능 불가능 부분 ->user-scalable=no,yes  -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
+    <!-- fontawesome 링크 아이콘 -->
+    <script src="https://kit.fontawesome.com/9f5e62a6ef.js" crossorigin="anonymous"></script>
+    <!-- favico img  -->
+    <!-- <link rel="icon" href="assets/img/favico.ico"> -->
+    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
+    <meta name="format-detection" content="telephone=no, address=no, email=no">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.min.css">
+  </head>
+    <body>
+      <!-- NavBar -->
+      <nav id="navbar">
+        <!-- 아이콘 부분-->
+        <div class="navbar__logo">
+          <i class="fas fa-dragon"></i>
+          <a href="#">DragonWoo</a>
+        </div>
+        <!-- nav_menu 부분 -->
+        <!-- ul.navbar__menu>li.navbar_menu_item*6  ->emmet-->
+        <ul class="navbar__menu">
+          <li class="navbar__menu__item">Home</li>
+          <li class="navbar__menu__item">About</li>
+          <li class="navbar__menu__item">Skills</li>
+          <li class="navbar__menu__item">My Work</li>
+          <li class="navbar__menu__item">Contents</li>
+          <li class="navbar__menu__item">Contact</li>
+        </ul>
+      </nav>
+      <!-- About -->
+      <section id="about"></section>
+      <!-- Skills -->
+      <scetion id="skills"></scetion>
+      <!-- Work -->
+      <section id="work"></section>
+      <!-- Contents -->
+      <section id="contents"></section>
+      <!-- Contact -->
+      <section id="contact"></section>
+    </body>
 </html>
