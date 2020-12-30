@@ -1,43 +1,24 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<meta charset="utf-8"/>
-<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
-<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
-<title>thumbnail</title>
-<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Document</title>
 </head>
 <body>
-<a id="kakao-link-btn" href="javascript:;">
-<img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
-</a>
-<script type='text/javascript'>
-  //<![CDATA[
-    Kakao.init('0ea702deeb89ca03d3d2f703de9d1686');
-
-    Kakao.Link.createDefaultButton({
-      container: '#kakao-link-btn',
-      objectType: 'feed',
-      content: {
-        title: 'thumbnail_TEST',
-        description: 'thumbNail_TESTTEST',
-        imageUrl: 'https://user-images.githubusercontent.com/74703315/103217283-92e0f500-495b-11eb-8f9f-4f94b7a5d393.mp4',
-        link: {
-          mobileWebUrl: 'https://drawoo.github.io/mobile/',
-          webUrl: 'https://drawoo.github.io/mobile/'
-        }
-      },
-      buttons: [
-        {
-          title: '버튼 타이틀thumbNail',
-          link: {
-            mobileWebUrl: 'https://drawoo.github.io/mobile/',
-            webUrl: 'https://drawoo.github.io/mobile/'
-          }
-        }
-      ]
-    });
-  //]]>
-</script>
+  <!-- NavBar -->
+  <nav id="navbar">
+    <div class="navbar__logo"><i class="fab fa-d-and-d"></i></div>
+  </nav>
+  <!-- About -->
+  <section id="about"></section>
+  <!-- Skills -->
+  <scetion id="skills"></scetion>
+  <!-- Work -->
+  <section id="work"></section>
+  <!-- Contents -->
+  <section id="contents"></section>
+  <!-- Contact -->
+  <section id="contact"></section>
 </body>
 </html>
