@@ -1,48 +1,43 @@
 <!DOCTYPE html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <!-- divice 설정 두손 확대 축소 가능 불가능 부분 ->user-scalable=no,yes  -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0, user-scalable=yes">
-    <!-- fontawesome 링크 아이콘 -->
-    <script src="https://kit.fontawesome.com/9f5e62a6ef.js" crossorigin="anonymous"></script>
-    <!-- favico img  -->
-     <link rel="icon" href="assets/images/draWoo.ico"> 
-    <meta http-equiv="X-UA-Compatible" content="IE=Edge">
-    <meta name="format-detection" content="telephone=no, address=no, email=no">
-    <title>Document</title>
-    <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.min.css">
-  </head>
-    <body>
-      <!-- NavBar -->
-      <nav id="navbar">
-        <!-- 아이콘 부분-->
-        <div class="navbar__logo">
-          <i class="fas fa-dragon"></i>
-          <a href="#">DragonWoo</a>
-        </div>
-        <!-- nav_menu 부분 -->
-        <!-- ul.navbar__menu>li.navbar_menu_item*6  ->emmet-->
-        <ul class="navbar__menu">
-          <li class="navbar__menu__item">Home</li>
-          <li class="navbar__menu__item">About</li>
-          <li class="navbar__menu__item">Skills</li>
-          <li class="navbar__menu__item">My Work</li>
-          <li class="navbar__menu__item">Contents</li>
-          <li class="navbar__menu__item">Contact</li>
-        </ul>
-      </nav>
-      <!-- About -->
-      <section id="about">
-          <h1>About Me</h1>
-      </section>
-      <!-- Skills -->
-      <scetion id="skills"></scetion>
-      <!-- Work -->
-      <section id="work"></section>
-      <!-- Contents -->
-      <section id="contents"></section>
-      <!-- Contact -->
-      <section id="contact"></section>
-    </body>
+<html>
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0, width=device-width"/>
+<title>타이틀을 넣어주세요.</title>
+<script src="//developers.kakao.com/sdk/js/kakao.min.js"></script>
+</head>
+<body>
+<a id="kakao-link-btn" href="javascript:;">
+<img src="//developers.kakao.com/assets/img/about/logos/kakaolink/kakaolink_btn_medium.png"/>
+</a>
+<script type='text/javascript'>
+  //<![CDATA[
+    Kakao.init('0ea702deeb89ca03d3d2f703de9d1686');
+
+    Kakao.Link.createDefaultButton({
+      container: '#kakao-link-btn',
+      objectType: 'feed',
+      content: {
+        title: '대제목',
+        description: '소제목',
+        imageUrl: '이미지주소',
+        link: {
+          mobileWebUrl: '이미지클릭시 이동할 모바일용 링크주소',
+          webUrl: '이미지클릭시 이동할 PC용 링크주소'
+        }
+      },
+      buttons: [
+        {
+          title: '버튼 타이틀',
+          link: {
+            mobileWebUrl: '버튼클릭시 이동할 모바일용 링크주소',
+            webUrl: '버튼클릭시 이동할 PC용 링크주소'
+          }
+        }
+      ]
+    });
+  //]]>
+</script>
+</body>
 </html>
