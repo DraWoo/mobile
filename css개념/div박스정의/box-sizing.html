@@ -6,7 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<!-- https://developer.mozila.org/en-US/docs/Web/CSS/box-sizing -->
+<!-- https://developer.mozilla.org/ko/docs/Web/CSS/box-sizing -->
+<!-- 현재 결과를 확인화면 부모div안에 자식 div가 부모의 100프로를 차지하기 때문에 부모의 빨간박스는 보이지가 않는다 -->
 <style>
     .box {
         width: 100px;
@@ -15,19 +16,36 @@
     }
     
     .inner {
-        width: 100px;
-        height: 100px;
+        width: 100%;
+        height: 100%;
         background-color: blue;
     }
+    
+    .box2 {
+        padding: 20px;
+        box-sizing: content-box;
+        border: 10px solid black;
+    }
+    
+    .box3 {
+        padding: 20px;
+        box-sizing: border-box;
+        border: 10px solid black;
+    }
 </style>
+<!-- box-sizing => 기본값은 content-box이고 컨텐츠만 지정 하겠다고 말하는거며 기본값으로 설정시 패딩에 값을 얼마나 넣든 박스의 컨텐츠 값은 변하지 않는다  -->
+<!--box-sizing ->border-box로 만들게 되면 보더속성까지 포함 박스를 만들겠다는 의미이며 박스의 컨텐츠 크기가 100이라 치면 보더와 패딩의 값을 넣은 만큼 div 박스안의 컨텐츠 값은 줄어든다 -->
 
 <body>
+    <h3>패딩값이 없는 박스</h3>
     <div class="box box1">
         <div class="inner"></div>
     </div>
+    <h3>패딩값이 없는 박스</h3>
     <div class="box box2">
         <div class="inner"></div>
     </div>
+    <h3>패딩값이 없는 박스</h3>
     <div class="box box3">
         <div class="inner"></div>
     </div>
