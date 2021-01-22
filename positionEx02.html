@@ -15,6 +15,7 @@
     }
     
     .box {
+        position: relative;
         width: 100px;
         height: 100px;
         background-color: red;
@@ -34,7 +35,15 @@
     }
     
     .box1 .inner1 {
-        position: static;
+        position: relative;
+        right: 40px;
+        bottom: 20px;
+    }
+    
+    .box2 .inner2 {
+        position: absolute;
+        top: 30px;
+        left: 100px
     }
 </style>
 <!-- position:static 를 해주면 프로퍼티 즉 top,left등 값을 넣어도 아무런 영향을 미치지 않는다 그이유는 static 자체가 고정이기 때문이다-->
