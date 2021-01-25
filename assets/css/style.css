@@ -13,9 +13,10 @@
     --color-light-white: #eeeeee;
     --color-dark-white: #bdbdbd;
     --color-pink: #fe918d;
-    --color-light-orange: #fcae92;
+    --color-light-orange: #f1b55c;
     --color-dark-skyblue: #313e45;
-    --color-dark-pink: #ff6863;
+    --color-dark-blue: #282f34;
+    --color-dark-pink: #e0653a;
     --color-grey: #616161;
     --color-light-grey: #7c7979;
     --color-blue: #73aace;
@@ -114,7 +115,7 @@ p {
 #navbar {
     display: flex;
     justify-content: space-between;
-    background-color: var(--color-dark-skyblue);
+    background-color: var(--color-dark-blue);
     /* 현재 네비바의 세로정렬을 위해서 반대 축으로 가운데 정렬을 해주고 */
     align-items: center;
     color: var(--color-light-orange);
@@ -165,8 +166,55 @@ p {
 
 .navbar__menu__item:hover {
     background-color: var(--color-dark-pink);
-    color: #341918;
+    color: #f9f9ca;
 }
 
 
 /* naviBar END */
+
+
+/* Home */
+
+#home {
+    background: url('imgs/home-background.png') center/cover no-repeat;
+    padding: 40px;
+    text-align: center;
+}
+
+.home__avatar {
+    width: 250px;
+    height: 250px;
+    border-radius: 50%;
+    border: 2px solid var(--color-light-white);
+}
+
+.home__title,
+.home__description {
+    color: var(--color-white);
+}
+
+.home__contact {
+    color: var(--color-white);
+    font-size: var(--font-regular);
+    font-weight: var(--weight-bold);
+    margin: 24px;
+    padding: 8px 12px;
+    border: 2px solid var(--color-white);
+    border-radius: var(--size-border-radius);
+}
+
+
+/* about Start */
+
+
+/* section common css */
+
+.section {
+    padding: 50px;
+    /* 현재상태에서 개발자 도구로 확인을 하면 margin 기본값이 오른쪽에만 margin이 위치하고 있다
+       이럴때 margin : auto를 해주면 가운데 정렬을 할 수 있다. */
+    text-align: center;
+    /* max-width: 를 설정해준다 보통 1000-1200px 데스크탑에서 편하게 볼 수 잇는 너비; */
+    max-width: 1200px;
+    margin: auto;
+}

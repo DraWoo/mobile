@@ -14,7 +14,7 @@
     <meta name="format-detection" content="telephone=no, address=no, email=no">
     <!-- style css link -->
     <link rel="stylesheet" href="assets/css/style.css">
-    <title>Document</title>
+    <title>DragonWoo World</title>
     <link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.min.css">
 
 </head>
@@ -39,11 +39,28 @@
                 <li class="navbar__menu__item">Contents</li>
                 <li class="navbar__menu__item">Contact</li>
             </ul>
+            <!-- Toggle button -->
+            <button class="navbar__toggle-btn">
+                <i class="fas fa-bars"></i>
+            </button>
         </div>
     </nav>
+
+    <!-- 다섯개의 section 을 공통적으로 가운데 정렬을 하기 위한 class 지정 -->
+    <!-- Home -->
+    <section id="home">
+        <div class="home__container">
+            <img src="imgs/profile.jpg" alt="Ellie's profile photo" class="home__avatar" />
+            <h1 class="home__title">Hello, <br />I'm Dream Coder</h1>
+            <h2 class="home__description">
+                A Software Engineer currently residing in Sydney, Australia.
+            </h2>
+            <button class="home__contact">Contact Me</button>
+        </div>
+    </section>
     <!-- About -->
 
-    <section id="about">
+    <section id="about" class="section">
         <h1>About Me</h1>
         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
             irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum."
@@ -95,7 +112,7 @@
         /
     </section>
     <!-- Skills -->
-    <scetion id="skills">
+    <scetion id="skills" class="section">
         <h1>Skills</h1>
         <h2>Skills & Attributes</h2>
         <p>"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute
@@ -203,7 +220,7 @@
     </scetion>
     <!-- Work -->
     <!-- 4개의 버튼을 페이지 이동없이 새로고침 하는 영역 -->
-    <section id="work">
+    <section id="work" class="section">
         <h1>My work</h1>
         <h3>Project</h3>
         <div class="work__categories">
@@ -225,7 +242,7 @@
         </div>
     </section>
     <!-- Testimonials-->
-    <section id="testimonials">
+    <section id="testimonials" class="section">
         <h1>Testimonials</h1>
         <h3>See what they say about me</h3>
         <div class="testimonials">
@@ -243,7 +260,7 @@
         </div>
     </section>
     <!-- footer -->
-    <section id="contact">
+    <section id="contact" class="section">
         <h1 class="cpntact__title">Let's talk</h1>
         <h2 class="contact__email">dragonwoo@day1lab.com</h2>
         <div class="contact__links">
