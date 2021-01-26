@@ -70,6 +70,25 @@ ul {
 }
 
 
+/* 홈화면에 버튼 설정 */
+
+
+/* 버튼을 transparent로 투명으로 만들어 준다  */
+
+
+/* cursor:pointer를 해주면 마우스를 올려놓았을때 손가락 모양으로 변함 */
+
+
+/* outline:none; 를 해주면 border 바깥 외곽선을 말한다. outline을 해주는건 요소를 두드려져 보이게 만들고자 할 때 사용합니다. */
+
+button {
+    background-color: transparent;
+    cursor: pointer;
+    border: none;
+    outline: none;
+}
+
+
 /* Typography 텍스트의 관련(h1,h2,h3,p 등 css 설정*/
 
 h1 {
@@ -175,16 +194,22 @@ p {
 
 /* Home */
 
+
+/* 백그라운드 이미지 설정 */
+
 #home {
-  /* center 가운데 이미지를 위차하면서 cover 반응형으로 no-repeat 이미지 반복없음 */
-    background: url('/assets/images/draBG.png') center/cover no-repeat;
+    /* center 가운데 이미지를 위차하면서 cover 반응형으로 no-repeat 이미지 반복없음 */
+    background: url('/assets/images/BG.png') center/cover no-repeat;
     padding: 40px;
     text-align: center;
 }
 
+
+/* 홈에 나오는 이미지를 동그랗게 만들고 radius에 50%를 주면 동그랗게 됨 */
+
 .home__avatar {
-    width: 250px;
-    height: 250px;
+    width: 150px;
+    height: 150px;
     border-radius: 50%;
     border: 2px solid var(--color-light-white);
 }
@@ -194,13 +219,16 @@ p {
     color: var(--color-white);
 }
 
+
+/* 버튼의 세부 설정 글자색,폰트 사이즈 마진 보더색 */
+
 .home__contact {
-    color: var(--color-white);
+    color: var(--color-light-orange);
     font-size: var(--font-regular);
     font-weight: var(--weight-bold);
     margin: 24px;
     padding: 8px 12px;
-    border: 2px solid var(--color-white);
+    border: 2px solid var(--color-dark-pink);
     border-radius: var(--size-border-radius);
 }
 
