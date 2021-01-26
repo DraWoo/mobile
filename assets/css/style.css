@@ -176,7 +176,8 @@ p {
 /* Home */
 
 #home {
-    background: url('imgs/home-background.png') center/cover no-repeat;
+  /* center 가운데 이미지를 위차하면서 cover 반응형으로 no-repeat 이미지 반복없음 */
+    background: url('/assets/images/draBG.png') center/cover no-repeat;
     padding: 40px;
     text-align: center;
 }
