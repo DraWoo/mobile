@@ -233,7 +233,10 @@ p {
 }
 
 
-/* about Start */
+/* 홈 영역 end */
+
+
+/* about 영역 Start */
 
 
 /* section common css */
@@ -246,4 +249,18 @@ p {
     /* max-width: 를 설정해준다 보통 1000-1200px 데스크탑에서 편하게 볼 수 잇는 너비; */
     max-width: 1200px;
     margin: auto;
+}
+
+
+/* 가로 정렬을 위해 디스플레이 플렉스로 가로정렬을 해주고 
+   각각의 공간을 넣어줘야 하니깐 
+   justify-content:space-between
+   space-between
+   아이템들의 “사이(between)”에 균일한 간격을 만들어 줍니다.
+   space-around
+   아이템들의 “둘레(around)”에 균일한 간격을 만들어 줍니다. */
+
+.about__majors {
+    display: flex;
+    justify-content: space-between;
 }
